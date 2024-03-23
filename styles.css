@@ -1,0 +1,171 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+}
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(255, 67, 98);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center; /* Align items with equal space between them */
+}
+
+.main-nav__items {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Add the rest of your CSS styles */
+
+.main-nav__item {
+  margin: 0 20px; /* Adjust margin as needed */
+}
+
+.main-nav__item:last-child::after {
+  content: "";
+  display: inline-block;
+  width: 20px; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+  background-image: url("Icon/menu-bar.png"); /* URL to your menu bar image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav__item {
+    margin: 10px 0; /* Adjust margin as needed */
+  }
+}
+
+/* Adjust padding, size, and position as needed */
+
+.half-section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 91vh; /* Adjust the height as needed */
+  /* or you can use padding */
+  /* padding-bottom: 100px; */
+  background-color: rgb(255, 160, 173);
+}
+
+/* Add other styles for .half-section as needed */
+
+.half-section .content {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Change from center to flex-start */
+}
+
+.half-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex: 1;
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .half-section {
+    flex-direction: row;
+  }
+
+  .half-section .content {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .half-section img {
+    width: 50%;
+  }
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(255, 160, 173);
+}
+
+.container > section {
+  flex-grow: 1; /* Each section takes up equal width */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.container > section.container_innerfirst {
+  display: flex;
+  gap: 20px; /* Add gap between inner sections */
+  width: 50%;
+}
+
+.container > section.container_innerfirst .left,
+.container > section.container_innerfirst .right {
+  flex: 1; /* Make left and right divs take up equal space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add gap between images */
+}
+
+.container > section.container_innerfirst .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container > section.container_innerfirst .top,
+.container > section.container_innerfirst .bottom {
+  flex: 1; /* Make top and bottom divs take up equal space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center;
+}
+
+.right {
+  height: 100%;
+}
+.top {
+  height: 50%;
+}
+.bottom {
+  height: 25%;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container > section.container_innerfirst .imageright {
+  width: 100%;
+  height: 100%; /* Set image height to fill its parent container */
+  object-fit: cover;
+}
+.container__second {
+  margin: auto;
+}
+.container_isecond {
+  display: flex;
+  justify-content: center;
+}
+
+.container_isecond h1 {
+  margin: 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
